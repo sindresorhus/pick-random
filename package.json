@@ -1,6 +1,6 @@
 {
   "name": "pick-random",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Pick random items from a list",
   "license": "MIT",
   "repository": "sindresorhus/pick-random",
