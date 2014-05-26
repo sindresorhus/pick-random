@@ -17,7 +17,10 @@ function help() {
 		'Example',
 		'  $ pick-random unicorn rainbow cake pony --count 2',
 		'  pony',
-		'  rainbow'
+		'  rainbow',
+		'',
+		'  $ pick-random yes no',
+		'  $ pick-random $(seq 54) --count 6'
 	].join('\n'));
 }
 

@@ -15,13 +15,16 @@ $ npm install --global pick-random
 $ pick-random --help
 
 Usage
-  $ pick-random <string> <string> ... [--count <number>]
-  $ cat newline-separated-list.txt | pick-random
+  $ pick-random <arg> <arg> ... [--count <count>]
+  $ cat newline-separated-picks.txt | pick-random
 
 Example
   $ pick-random unicorn rainbow cake pony --count 2
   pony
   rainbow
+
+  $ pick-random yes no
+  $ pick-random $(seq 54) --count 6
 ```
 
 
