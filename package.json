@@ -1,0 +1,43 @@
+{
+  "name": "pick-random",
+  "version": "0.0.0",
+  "description": "Pick random items from a list",
+  "license": "MIT",
+  "repository": "sindresorhus/pick-random",
+  "bin": {
+    "pick-random": "cli.js"
+  },
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "cli.js",
+    "index.js"
+  ],
+  "keywords": [
+    "cli",
+    "bin",
+    "app",
+    "pick",
+    "choose",
+    "random",
+    "rand",
+    "list",
+    "raffle"
+  ],
+  "dependencies": {
+    "get-stdin": "^0.1.0",
+    "minimist": "^0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
