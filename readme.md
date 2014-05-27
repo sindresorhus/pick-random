@@ -24,7 +24,7 @@ Example
   rainbow
 
   $ pick-random yes no
-  $ pick-random $(seq 54) --count 6
+  $ pick-random {1..54} --count 6
 ```
 
 
