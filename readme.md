@@ -11,20 +11,20 @@ Useful for making decisions, picking a winner, or anything else randomness can h
 $ npm install --global pick-random
 ```
 
-```sh
+```
 $ pick-random --help
 
-Usage
-  $ pick-random <arg> <arg> ... [--count <count>]
-  $ cat newline-separated-picks.txt | pick-random
+  Usage
+    pick-random <arg> <arg> ... [--count <count>]
+    cat newline-separated-picks.txt | pick-random
 
-Example
-  $ pick-random unicorn rainbow cake pony --count 2
-  pony
-  rainbow
+  Example
+    pick-random unicorn rainbow cake pony --count 2
+    pony
+    rainbow
 
-  $ pick-random yes no
-  $ pick-random {1..54} --count 6
+    pick-random yes no
+    pick-random $(seq 54) --count 6
 ```
 
 

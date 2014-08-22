@@ -3,24 +3,25 @@
 var stdin = require('get-stdin');
 var argv = require('minimist')(process.argv.slice(2));
 var pkg = require('./package.json');
-var pickRandom = require('./index');
+var pickRandom = require('./');
 var input = argv._;
 
 function help() {
 	console.log([
-		pkg.description,
 		'',
-		'Usage',
-		'  $ pick-random <arg> <arg> ... [--count <count>]',
-		'  $ cat newline-separated-picks.txt | pick-random',
+		'  ' + pkg.description,
 		'',
-		'Example',
-		'  $ pick-random unicorn rainbow cake pony --count 2',
-		'  pony',
-		'  rainbow',
+		'  Usage',
+		'    pick-random <arg> <arg> ... [--count <count>]',
+		'    cat newline-separated-picks.txt | pick-random',
 		'',
-		'  $ pick-random yes no',
-		'  $ pick-random $(seq 54) --count 6'
+		'  Example',
+		'    pick-random unicorn rainbow cake pony --count 2',
+		'    pony',
+		'    rainbow',
+		'',
+		'    pick-random yes no',
+		'    pick-random $(seq 54) --count 6'
 	].join('\n'));
 }
 

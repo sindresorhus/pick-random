@@ -4,13 +4,13 @@
   "description": "Pick random items from a list",
   "license": "MIT",
   "repository": "sindresorhus/pick-random",
-  "bin": {
-    "pick-random": "cli.js"
-  },
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "http://sindresorhus.com"
+  },
+  "bin": {
+    "pick-random": "cli.js"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -34,8 +34,8 @@
     "raffle"
   ],
   "dependencies": {
-    "get-stdin": "^0.1.0",
-    "minimist": "^0.1.0"
+    "get-stdin": "^3.0.0",
+    "minimist": "^1.1.0"
   },
   "devDependencies": {
     "mocha": "*"
