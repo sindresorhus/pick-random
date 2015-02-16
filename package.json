@@ -34,7 +34,7 @@
     "raffle"
   ],
   "dependencies": {
-    "get-stdin": "^3.0.0",
+    "get-stdin": "^4.0.1",
     "minimist": "^1.1.0"
   },
   "devDependencies": {
