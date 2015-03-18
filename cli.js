@@ -1,51 +1,36 @@
 #!/usr/bin/env node
 'use strict';
 var stdin = require('get-stdin');
-var argv = require('minimist')(process.argv.slice(2));
-var pkg = require('./package.json');
+var meow = require('meow');
 var pickRandom = require('./');
-var input = argv._;
 
-function help() {
-	console.log([
+var cli = meow({
+	help: [
+		'Usage',
+		'  $ pick-random <arg> <arg> ... [--count <count>]',
+		'  $ cat newline-separated-picks.txt | pick-random',
 		'',
-		'  ' + pkg.description,
+		'Example',
+		'  $ pick-random unicorn rainbow cake pony --count 2',
+		'  pony',
+		'  rainbow',
 		'',
-		'  Usage',
-		'    pick-random <arg> <arg> ... [--count <count>]',
-		'    cat newline-separated-picks.txt | pick-random',
-		'',
-		'  Example',
-		'    pick-random unicorn rainbow cake pony --count 2',
-		'    pony',
-		'    rainbow',
-		'',
-		'    pick-random yes no',
-		'    pick-random $(seq 54) --count 6'
-	].join('\n'));
-}
+		'  $ pick-random yes no',
+		'  $ pick-random $(seq 54) --count 6'
+	].join('\n')
+});
 
 function init(data) {
-	console.log(pickRandom(data, {count: argv.count}).join('\n'));
-}
-
-if (argv.help) {
-	help();
-	return;
-}
-
-if (argv.version) {
-	console.log(pkg.version);
-	return;
+	console.log(pickRandom(data, {count: cli.flags.count}).join('\n'));
 }
 
 if (process.stdin.isTTY) {
-	if (input.length === 0) {
-		help();
-		return;
+	if (cli.input.length === 0) {
+		console.error('Input required');
+		process.exit(1);
 	}
 
-	init(input);
+	init(cli.input);
 } else {
 	stdin(function (data) {
 		init(data.trim().split('\n'));
