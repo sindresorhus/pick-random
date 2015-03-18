@@ -7,7 +7,7 @@ Useful for making decisions, picking a winner, or anything else randomness can h
 
 ## CLI
 
-```sh
+```
 $ npm install --global pick-random
 ```
 
@@ -30,7 +30,7 @@ $ pick-random --help
 
 ## API
 
-```sh
+```
 $ npm install --save pick-random
 ```
 

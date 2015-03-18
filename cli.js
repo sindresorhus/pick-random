@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-var stdin = require('get-stdin');
+var getStdin = require('get-stdin');
 var meow = require('meow');
 var pickRandom = require('./');
 
@@ -32,7 +32,7 @@ if (process.stdin.isTTY) {
 
 	init(cli.input);
 } else {
-	stdin(function (data) {
+	getStdin(function (data) {
 		init(data.trim().split('\n'));
 	});
 }
