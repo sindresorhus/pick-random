@@ -4,21 +4,19 @@ var getStdin = require('get-stdin');
 var meow = require('meow');
 var pickRandom = require('./');
 
-var cli = meow({
-	help: [
-		'Usage',
-		'  $ pick-random <arg> <arg> ... [--count <count>]',
-		'  $ cat newline-separated-picks.txt | pick-random',
-		'',
-		'Example',
-		'  $ pick-random unicorn rainbow cake pony --count 2',
-		'  pony',
-		'  rainbow',
-		'',
-		'  $ pick-random yes no',
-		'  $ pick-random $(seq 54) --count 6'
-	].join('\n')
-});
+var cli = meow([
+	'Usage',
+	'  $ pick-random <arg> <arg> ... [--count <count>]',
+	'  $ cat newline-separated-picks.txt | pick-random',
+	'',
+	'Example',
+	'  $ pick-random unicorn rainbow cake pony --count 2',
+	'  pony',
+	'  rainbow',
+	'',
+	'  $ pick-random yes no',
+	'  $ pick-random $(seq 54) --count 6'
+].join('\n'));
 
 function init(data) {
 	console.log(pickRandom(data, {count: cli.flags.count}).join('\n'));

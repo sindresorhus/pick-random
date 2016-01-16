@@ -35,26 +35,27 @@ $ npm install --save pick-random
 ```
 
 ```js
-var pickRandom = require('pick-random');
+const pickRandom = require('pick-random');
 
 pickRandom(['Sindre', 'Stephen', 'Unicorn', 'Pascal', 'Addy', 'Pony'], {count: 2});
 //=> ['Unicorn', 'Pony']
 ```
 
-### pickRandom(list, options)
+### pickRandom(list, [options])
 
 Returns an `array`.
 
 #### list
 
-*Required*  
 Type: `array`
 
 List to pick from.
 
-#### options.count
+#### options
 
-Type: `number`  
+##### count
+
+Type: `number`
 Default: `1`
 
 Number of picks.
