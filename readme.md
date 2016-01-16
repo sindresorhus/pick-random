@@ -59,7 +59,7 @@ Default: `1`
 
 Number of picks.
 
-Must be lower than the length of `list`.
+Must be lower or equal to the length of `list`.
 
 
 ## License
