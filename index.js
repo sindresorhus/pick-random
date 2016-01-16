@@ -10,8 +10,12 @@ module.exports = function (data, options) {
 		throw new TypeError('Expected an array as the first argument');
 	}
 
-	if (count >= data.length) {
-		throw new Error('options.count must be lower than the number of picks');
+	if (count > data.length) {
+		throw new Error('options.count must be lower or equal to the the number of picks');
+	}
+
+	if (count === data.length) {
+		return data;
 	}
 
 	while (count--) {
