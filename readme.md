@@ -5,34 +5,14 @@
 Useful for making decisions, picking a winner, or anything else randomness can help you with.
 
 
-## CLI
-
-```
-$ npm install --global pick-random
-```
-
-```
-$ pick-random --help
-
-  Usage
-    $ pick-random <arg> <arg> ... [--count <count>]
-    $ cat newline-separated-picks.txt | pick-random
-
-  Example
-    $ pick-random unicorn rainbow cake pony --count 2
-    pony
-    rainbow
-
-    $ pick-random yes no
-    $ pick-random $(seq 54) --count 6
-```
-
-
-## API
+## Install
 
 ```
 $ npm install --save pick-random
 ```
+
+
+## Usage
 
 ```js
 const pickRandom = require('pick-random');
@@ -41,28 +21,35 @@ pickRandom(['Sindre', 'Stephen', 'Unicorn', 'Pascal', 'Addy', 'Pony'], {count: 2
 //=> ['Unicorn', 'Pony']
 ```
 
-### pickRandom(list, [options])
+### pickRandom(input, [options])
 
-Returns an `array`.
+Returns an `Array`.
 
-#### list
+#### input
 
-Type: `array`
+Type: `Array`
 
 List to pick from.
 
 #### options
 
+Type: `Object`
+
 ##### count
 
-Type: `number`
+Type: `number`<br>
 Default: `1`
 
 Number of picks.
 
-Must be smaller or the same length of `list`.
+Must be smaller or the same length as `input`.
+
+
+## Related
+
+- [pick-random-cli](https://github.com/sindresorhus/pick-random-cli) - CLI for this module
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

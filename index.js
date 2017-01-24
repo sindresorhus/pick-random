@@ -1,18 +1,19 @@
 'use strict';
-module.exports = function (data, options) {
-	options = options || {};
+module.exports = (data, opts) => {
+	opts = Object.assign({count: 1}, opts);
 	data = data.slice();
 
-	var count = Number(options.count) || 1;
-	var ret = [];
+	let count = opts.count;
 
 	if (!Array.isArray(data)) {
-		throw new TypeError('Expected an array as the first argument');
+		throw new TypeError('Expected an Array as the first argument');
 	}
 
 	if (count > data.length) {
 		throw new Error('Count must be lower or the same as the number of picks');
 	}
+
+	const ret = [];
 
 	while (count--) {
 		ret.push(data.splice(Math.floor(Math.random() * data.length), 1)[0]);
