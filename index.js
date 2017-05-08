@@ -1,6 +1,5 @@
 'use strict';
-module.exports = (data, opts) => {
-	opts = Object.assign({count: 1}, opts);
+module.exports = (data, opts = {count: 1}) => {
 	data = data.slice();
 
 	let count = opts.count;
