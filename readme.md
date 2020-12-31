@@ -1,4 +1,4 @@
-# pick-random [![Build Status](https://travis-ci.org/sindresorhus/pick-random.svg?branch=master)](https://travis-ci.org/sindresorhus/pick-random)
+# pick-random
 
 > Pick random items from a list
 
