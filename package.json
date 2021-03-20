@@ -13,13 +13,12 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && ava && tsd"
   },
   "files": [
     "index.js",
     "index.d.ts"
   ],
-  "types": "index.d.ts",
   "keywords": [
     "pick",
     "choose",
@@ -37,6 +36,7 @@
   ],
   "devDependencies": {
     "ava": "*",
+    "tsd": "^0.14.0",
     "xo": "*"
   }
 }
