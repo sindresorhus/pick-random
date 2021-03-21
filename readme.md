@@ -4,13 +4,11 @@
 
 Useful for making decisions, picking a winner, or anything else randomness can help you with.
 
-
 ## Install
 
 ```
-$ npm install --save pick-random
+$ npm install pick-random
 ```
-
 
 ## Usage
 
@@ -21,7 +19,7 @@ pickRandom(['Sindre', 'Stephen', 'Unicorn', 'Pascal', 'Addy', 'Pony'], {count: 2
 //=> ['Unicorn', 'Pony']
 ```
 
-### pickRandom(input, [options])
+### pickRandom(input, options?)
 
 Returns an `Array`.
 
@@ -33,23 +31,17 @@ List to pick from.
 
 #### options
 
-Type: `Object`
+Type: `object`
 
 ##### count
 
-Type: `number`<br>
+Type: `number`\
 Default: `1`
 
 Number of picks.
 
 Must be smaller or the same length as `input`.
 
-
 ## Related
 
 - [pick-random-cli](https://github.com/sindresorhus/pick-random-cli) - CLI for this module
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
