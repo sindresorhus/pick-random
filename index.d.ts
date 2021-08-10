@@ -1,27 +1,23 @@
-declare namespace pickRandom {
-	interface Options {
-		/**
-		Number of picks.
+export interface Options {
+	/**
+	The number of picks.
 
-		Must be smaller or the same length as `input`.
+	Must be smaller or the same length as `input`.
 
-		@default 1
-		*/
-		readonly count?: number;
-	}
+	@default 1
+	*/
+	readonly count?: number;
 }
 
 /**
-Pick random items from a list
+Pick random items from a list.
 
 @example
 ```
-import pickRandom from 'pick-random'
+import pickRandom from 'pick-random';
 
 pickRandom(['Sindre', 'Stephen', 'Unicorn', 'Pascal', 'Addy', 'Pony'], {count: 2});
 //=> ['Unicorn', 'Pony']
 ```
 */
-declare function pickRandom<T>(array: readonly T[], options?: pickRandom.Options): T[];
-
-export = pickRandom;
+export default function pickRandom<T>(input: readonly T[], options?: Options): T[];

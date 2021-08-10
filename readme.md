@@ -13,7 +13,7 @@ $ npm install pick-random
 ## Usage
 
 ```js
-const pickRandom = require('pick-random');
+import pickRandom from 'pick-random';
 
 pickRandom(['Sindre', 'Stephen', 'Unicorn', 'Pascal', 'Addy', 'Pony'], {count: 2});
 //=> ['Unicorn', 'Pony']
@@ -27,7 +27,7 @@ Returns an `Array`.
 
 Type: `Array`
 
-List to pick from.
+The list to pick from.
 
 #### options
 
@@ -38,7 +38,7 @@ Type: `object`
 Type: `number`\
 Default: `1`
 
-Number of picks.
+The number of picks.
 
 Must be smaller or the same length as `input`.
 

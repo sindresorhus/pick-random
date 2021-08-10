@@ -10,10 +10,16 @@ test('main', t => {
 		pickRandom([1]);
 	});
 	t.is(pickRandom([1]).length, 1);
+
 	t.throws(() => {
 		pickRandom('1');
-	}, 'Expected an Array as the first argument');
+	}, {
+		message: 'Expected an array as the first argument',
+	});
+
 	t.throws(() => {
 		pickRandom([1, 2, 3, 4], {count: 5});
-	}, 'Count must be lower or the same as the number of picks');
+	}, {
+		message: 'Count must be lower or the same as the number of picks',
+	});
 });

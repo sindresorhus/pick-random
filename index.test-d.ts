@@ -1,5 +1,5 @@
 import {expectType, expectError} from 'tsd';
-import pickRandom = require('.');
+import pickRandom from './index.js';
 
 expectType<string[]>(pickRandom(['foo']));
 expectType<string[]>(pickRandom(['foo', 'bar']));

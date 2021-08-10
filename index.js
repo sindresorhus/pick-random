@@ -1,15 +1,13 @@
-'use strict';
-
-module.exports = (data, {count = 1} = {}) => {
-	data = data.slice();
-
+export default function pickRandom(data, {count = 1} = {}) {
 	if (!Array.isArray(data)) {
-		throw new TypeError('Expected an Array as the first argument');
+		throw new TypeError('Expected an array as the first argument');
 	}
 
 	if (count > data.length) {
 		throw new Error('Count must be lower or the same as the number of picks');
 	}
+
+	data = [...data];
 
 	const pickedElements = [];
 
@@ -18,4 +16,4 @@ module.exports = (data, {count = 1} = {}) => {
 	}
 
 	return pickedElements;
-};
+}
